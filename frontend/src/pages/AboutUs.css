@@ -1,0 +1,113 @@
+.about-page {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.about-content {
+  padding: 48px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 48px;
+  margin-bottom: 40px;
+}
+
+.about-section h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 20px;
+  color: var(--white-primary);
+  letter-spacing: 2px;
+  line-height: 1.8;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-text p {
+  font-size: 10px;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  color: var(--gray-darker);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.feature-item {
+  padding: 32px;
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 12px;
+  color: var(--green-primary);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+.feature-item p {
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: var(--gray-dark);
+}
+
+.contact-feedback-section {
+  padding: 48px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-feedback-section h2 {
+  font-size: 16px;
+  color: var(--white-primary);
+  margin-bottom: 32px;
+  letter-spacing: 2px;
+}
+
+.contact-feedback-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-feedback-buttons .pixel-button {
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 32px 24px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-feedback-section {
+    padding: 32px 24px;
+  }
+
+  .contact-feedback-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-feedback-buttons .pixel-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

@@ -1,0 +1,38 @@
+.add-plant-page {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.add-plant-content {
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-plant-form {
+  width: 100%;
+}
+
+.add-plant-form h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: var(--green-primary);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+.add-plant-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+textarea.pixel-input {
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  line-height: 1.8;
+}

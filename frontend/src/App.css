@@ -1,0 +1,222 @@
+.app-container {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.pixel-border {
+  border: 4px solid var(--green-primary);
+  background: var(--white);
+  image-rendering: pixelated;
+}
+
+.pixel-button {
+  background: var(--green-primary);
+  color: var(--white);
+  border: none;
+  border-bottom: 5px solid var(--green-darker);
+  border-right: 5px solid var(--green-darker);
+  border-top: 2px solid var(--green-light);
+  border-left: 2px solid var(--green-light);
+  padding: 12px 24px;
+  font-size: 10px;
+  font-weight: normal;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.05s ease;
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.pixel-button:hover {
+  background: var(--green-light);
+  transform: translate(1px, 1px);
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+}
+
+.pixel-button:active {
+  transform: translate(3px, 3px);
+  border-bottom: 2px solid var(--green-darker);
+  border-right: 2px solid var(--green-darker);
+  border-top: 5px solid var(--green-light);
+  border-left: 5px solid var(--green-light);
+  background: var(--green-dark);
+}
+
+.pixel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pixel-button:disabled:hover {
+  transform: none;
+  border-bottom-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.pixel-input {
+  background: var(--white);
+  color: var(--gray-darker);
+  border: 3px solid var(--green-primary);
+  border-bottom: 4px solid var(--green-darker);
+  border-right: 4px solid var(--green-darker);
+  padding: 14px 16px;
+  font-size: 10px;
+  width: 100%;
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  line-height: 1.8;
+  transition: all 0.1s ease;
+}
+
+.pixel-input::placeholder {
+  color: var(--gray-dark);
+  opacity: 0.7;
+}
+
+.pixel-input:focus {
+  outline: none;
+  border-color: var(--green-light);
+  border-bottom-color: var(--green-primary);
+  border-right-color: var(--green-primary);
+  background: var(--gray-light);
+}
+
+.pixel-card {
+  background: var(--white);
+  border: 4px solid var(--green-primary);
+  border-bottom: 6px solid var(--green-darker);
+  border-right: 6px solid var(--green-darker);
+  padding: 32px;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+.pixel-text {
+  color: var(--green-primary);
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.pixel-title {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: var(--green-primary);
+  image-rendering: pixelated;
+  font-weight: normal;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* Navbar Styles - Shared across all pages */
+.dashboard-nav {
+  background: transparent;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  border-bottom: 4px solid var(--green-primary);
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.dashboard-nav h1 {
+  font-size: 16px;
+  color: var(--green-primary);
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* Make only the logo text (PLANT PAL) white, not nav links */
+.dashboard-nav > a.pixel-text {
+  color: var(--white);
+}
+
+.nav-logo {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--green-primary);
+  font-size: 10px;
+  transition: all 0.1s ease;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  position: relative;
+  padding: 12px 20px;
+  border: 3px solid var(--green-primary);
+  border-bottom: 4px solid var(--green-darker);
+  border-right: 4px solid var(--green-darker);
+  background: var(--white);
+  display: inline-block;
+  image-rendering: pixelated;
+}
+
+.nav-link:hover {
+  color: var(--green-darker);
+  background: var(--gray-light);
+  transform: translate(1px, 1px);
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  border-top-width: 4px;
+  border-left-width: 4px;
+}
+
+.nav-link:active {
+  transform: translate(2px, 2px);
+  border-bottom: 3px solid var(--green-darker);
+  border-right: 3px solid var(--green-darker);
+  border-top: 4px solid var(--green-light);
+  border-left: 4px solid var(--green-light);
+}
+
+/* Mobile responsive styles for navbar */
+@media (max-width: 768px) {
+  .dashboard-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    min-height: auto;
+  }
+  
+  .nav-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  
+  .nav-link {
+    padding: 10px 16px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,137 @@
+.notification {
+  position: relative;
+  margin-bottom: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-content {
+  padding: 16px 20px;
+  min-width: 300px;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.notification-info {
+  border-color: var(--green-primary);
+  border-bottom-color: var(--green-darker);
+  border-right-color: var(--green-darker);
+}
+
+.notification-success {
+  border-color: var(--green-primary);
+  border-bottom-color: var(--green-darker);
+  border-right-color: var(--green-darker);
+}
+
+.notification-error {
+  border-color: var(--red);
+  border-bottom-color: var(--red-darker);
+  border-right-color: var(--red-darker);
+}
+
+.notification-warning {
+  border-color: #ff9800;
+  border-bottom-color: #e68900;
+  border-right-color: #e68900;
+}
+
+.notification-message {
+  color: var(--gray-darker);
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  flex: 1;
+  margin: 0;
+}
+
+.notification-success .notification-message {
+  color: var(--green-primary);
+}
+
+.notification-error .notification-message {
+  color: var(--red);
+}
+
+.notification-warning .notification-message {
+  color: #ff9800;
+}
+
+.notification-close {
+  background: transparent;
+  border: 2px solid var(--gray-dark);
+  color: var(--gray-dark);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.1s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  border-color: var(--gray-darker);
+  color: var(--gray-darker);
+  background: var(--gray);
+}
+
+.notification-error .notification-close {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.notification-error .notification-close:hover {
+  border-color: var(--red-dark);
+  color: var(--red-dark);
+  background: rgba(211, 47, 47, 0.1);
+}
+
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 400px;
+}
+
+.notification-container > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .notification-container {
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .notification-content {
+    min-width: auto;
+    max-width: 100%;
+  }
+}
+

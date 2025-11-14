@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-primary: #55C55A;
+  --green-dark: #4a9f4e;
+  --green-darker: #3d7f40;
+  --green-light: #6dd472;
+  --white: #ffffff;
+  --gray-light: #f8f8f8;
+  --gray: #e8e8e8;
+  --gray-dark: #666666;
+  --gray-darker: #333333;
+  --red: #d32f2f;
+  --red-dark: #b71c1c;
+  --red-darker: #8b0000;
+}
+
+body {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  background: transparent;
+  color: var(--gray-darker);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+button, input, textarea, select {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+}
+
+::selection {
+  background: var(--green-primary);
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--green-primary);
+  color: var(--white);
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--green-primary);
+  margin-right: 4px;
+}
+
+h1 .icon,
+h2 .icon,
+h3 .icon {
+  margin-right: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* Scrollbar Styling  */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-darker);
+  border: 2px solid var(--green-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-primary);
+  border: 2px solid var(--gray-darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-light);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--gray-darker);
+  border: 2px solid var(--green-primary);
+}
